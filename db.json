@@ -4,25 +4,43 @@
             "id": 1,
             "from": "Nairobi",
             "to": "Mombasa",
-            "departureTime": "10:00"
+            "departureTime": "10:00",
+            "price":"KES 1500"
         },
         {
             "id": 2,
             "from": "Nairobi",
             "to": "Kisumu",
-            "departureTime": "12:00"
+            "departureTime": "12:00",
+            "price":"KES 1500"
         },
         {
             "id": 3,
             "from": "Mombasa",
             "to": "Nairobi",
-            "departureTime": "14:00"
+            "departureTime": "14:00",
+            "price":"KES 1500"
         },
         {
             "id": 4,
             "from": "Kisumu",
             "to": "Nairobi",
-            "departureTime": "16:00"
+            "departureTime": "16:00",
+            "price":"KES 1500"
+        },
+        {
+            "id": 5,
+            "from": "Mombasa",
+            "to": "Kisumu",
+            "departureTime": "18:00",
+            "price":"KES 3000"
+        },
+        {
+            "id": 6,
+            "from": "Kisumu",
+            "to": "Mombasa",
+            "departureTime": "20:00",
+            "price":"KES 3000"
         }
     ],
     "vehicles":[
