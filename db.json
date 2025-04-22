@@ -68,5 +68,8 @@
             "capacity": 15,
             "routeId": 4
         }
+    ],
+    "bookings":[
+        
     ]
 }
