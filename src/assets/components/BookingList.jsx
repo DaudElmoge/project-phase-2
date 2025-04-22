@@ -12,33 +12,31 @@ function BookingList() {
         , []);
     
     return (
-        <div>
-            <h2>Booking List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Route</th>
-                        <th>Date</th>
-                        <th>Departure Time</th>
-                        <th>Vehicle</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {bookings.map((booking) => (
-                        <tr key={booking.id}>
-                            <td>{booking.name}</td>
-                            <td>{booking.route}</td>
-                            <td>{booking.date}</td>
-                            <td>{booking.departureTime}</td>
-                            <td>{booking.vehicle}</td>
-                            <td>{booking.price}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+      <div>
+        <h2>Booking List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Route</th>
+              <th>Date</th>
+              <th>Vehicle</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {bookings.map((booking) => (
+              <tr key={booking.id}>
+                <td>{booking.name}</td>
+                <td>{booking.route}</td>
+                <td>{booking.departureDate}</td>
+                <td>{booking.vehicle}</td>
+                <td>{booking.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
 }
 export default BookingList;

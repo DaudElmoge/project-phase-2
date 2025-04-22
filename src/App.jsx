@@ -1,18 +1,18 @@
 import React from "react";
-import Header from "./components/Header";
-import AdSection from "./components/AdSection";
-import RouteDisplay from "./components/RouteDisplay";
-import BookingForm from "./components/BookingForm";
-import BookingList from "./components/BookingList";
-import LocationMap from "./components/LocationMap";
-import Footer from "./components/Footer";
+//import Header from "./assets/components/Header";
+//import AdSection from "./components/AdSection";
+import RouteDisplay from "./assets/components/RouteDisplay";
+import BookingForm from "./assets/components/BookingForm";
+import BookingList from "./assets/components/BookingList";
+//import LocationMap from "./assets/components/LocationMap";
+//import Footer from "./assets/components/Footer";
 
 function App() {
   return (
     <div>
-      <Header />
+      {/*<Header />
 
-      <AdSection />
+      <AdSection />*/}
       <div>
         <RouteDisplay />
       </div>
@@ -23,9 +23,9 @@ function App() {
         <BookingList />
       </div>
       <div>
-        <LocationMap />
+        {/*<LocationMap />*/}
       </div>
-      <Footer />
+      {/* <Footer />*/}
     </div>
   );
 }
