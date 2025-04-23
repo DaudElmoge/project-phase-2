@@ -5,7 +5,7 @@ import RouteDisplay from "./assets/components/RouteDisplay";
 import BookingForm from "./assets/components/BookingForm";
 import BookingList from "./assets/components/BookingList";
 //import LocationMap from "./assets/components/LocationMap";
-//import Footer from "./assets/components/Footer";
+import Footer from "./assets/components/Footer";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
       <div>
         {/*<LocationMap />*/}
       </div>
-      {/* <Footer />*/}
+      <Footer />
     </div>
   );
 }

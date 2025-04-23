@@ -1,26 +1,53 @@
 import React, { useState } from "react";
 
 function Footer() {
-  const [feedback, setfeedback] = useState("");
+  const [feedback, setFeedback] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setfeedback("");
-  };
+   const handleSubmit = (e) => {
+     e.preventDefault();
+     if (feedback.trim() === "") {
+       alert("Please enter your feedback before submitting.");
+       return;
+     }
+     alert("Thank you for your feedback!");
+     setFeedback("");
+   };
+
   return (
-    <footer>
-      <p>
-        &copy; {new Date().getFullYear()} Zuru Shuttles. All rights reserved.
-      </p>
-      <form on submit={handleSubmit} style={{ marginTop: "15px" }}>
-        <input
-          type=""
-          placeholder=""
-          value={feedback}
-          onchange={(e) => setfeedback(e.target.value)}
-        />
-        <button type="submit">feedback</button>
-      </form>
+    <footer className="bg-black text-white py-10 px-6">
+      <div className="max-w-6xl mx-auto space-y-6">
+        {/* Contact Info */}
+        <div className="text-center">
+          <p className="text-lg font-semibold text-yellow-400">Zuru Shuttles</p>
+          <p>📞 +254 712 345 678</p>
+          <p>📧 support@zurushuttles.co.ke</p>
+        </div>
+
+        {/* Feedback Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <input
+            type="text"
+            placeholder="Share your feedback..."
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            className="w-full sm:w-1/2 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <button
+            type="submit"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-lg transition cursor-pointer"
+          >
+            Submit
+          </button>
+        </form>
+
+        {/* Copyright */}
+        <p className="text-center text-sm text-gray-400 mt-4">
+          &copy; {new Date().getFullYear()} Zuru Shuttles. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
