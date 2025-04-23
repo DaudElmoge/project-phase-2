@@ -11,12 +11,17 @@ function RouteDisplay() {
   }, []);
 
   return (
-    <div>
-      <h2>Available Routes</h2>
-      <ul>
+    <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg my-8">
+      <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
+        Available Routes
+      </h2>
+      <ul className="space-y-3">
         {routes.map((route) => (
-          <li key={route.id}>
-            {route.from} to {route.to} - Departure Time: {route.departureTime}
+          <li
+            key={route.id}
+            className="bg-gray-700 p-4 rounded-md hover:bg-gray-600 transition"
+          >
+            {route.from} ➤ {route.to} - Departure Time⌚ {route.departureTime}
           </li>
         ))}
       </ul>
