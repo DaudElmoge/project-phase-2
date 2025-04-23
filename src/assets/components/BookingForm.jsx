@@ -38,7 +38,7 @@ function BookingForm() {
     e.preventDefault();
 
     if (!name || !route || !date || !vehicle) {
-      setError("Please fill in all fields");
+      setError("Please fill in all fields.");
       return;
     }
 
@@ -62,7 +62,6 @@ function BookingForm() {
       .then((res) => res.json())
       .then(() => {
         alert("Booking successful");
-        // Reset form
         setName("");
         setRoute("");
         setVehicle("");
@@ -80,27 +79,27 @@ function BookingForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-gray-800 text-white p-6 rounded-xl shadow-lg max-w-full"
       id="book"
+      className="max-w-full bg-gradient-to-r from-black to-gray-900 text-white p-6 rounded-xl shadow-lg border "
     >
-      <h2>Book a Seat</h2>
+      <h2 className="text-2xl font-bold text-yellow-400 text-center mb-4">
+        Book a Seat
+      </h2>
 
-      {error && <p className="text-red-500 mb-4">{error}</p>}
+      {error && <p className="text-red-400 text-center">{error}</p>}
 
       <input
         type="text"
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600 placeholder-white"
-        required
+        className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
       />
 
       <select
         value={route}
         onChange={(e) => setRoute(e.target.value)}
-        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
-        required
+        className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
       >
         <option value="">Select Route</option>
         {routes.map((r) => (
@@ -113,8 +112,7 @@ function BookingForm() {
       <select
         value={vehicle}
         onChange={(e) => setVehicle(e.target.value)}
-        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
-        required
+        className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
       >
         <option value="">Select Vehicle</option>
         {vehicles.map((v) => (
@@ -128,25 +126,24 @@ function BookingForm() {
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
-        required
+        className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
       />
 
       {departureTime && (
-        <p className="text-yellow-300 mb-4">
+        <p className="text-yellow-300">
           Departure Time: <strong>{departureTime}</strong>
         </p>
       )}
 
       {price && (
-        <p className="text-yellow-300 mb-4">
+        <p className="text-yellow-300">
           Price: <strong>{price}</strong>
         </p>
       )}
 
       <button
         type="submit"
-        className="w-full bg-yellow-400 text-black py-2 px-4 rounded hover:bg-yellow-300 transition cursor-pointer"
+        className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition cursor-pointer"
       >
         Book Now
       </button>

@@ -11,7 +11,7 @@ function RouteDisplay() {
   }, []);
 
   return (
-    <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg my-8">
+    <div className="bg-gradient-to-r from-black to-gray-900 text-white p-6 rounded-lg shadow-lg my-8">
       <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
         Available Routes
       </h2>
