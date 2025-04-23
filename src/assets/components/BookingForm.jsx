@@ -78,20 +78,30 @@ function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="booking-form" id="book">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-gray-800 text-white p-6 rounded-xl shadow-lg max-w-full"
+      id="book"
+    >
       <h2>Book a Seat</h2>
 
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="text-red-500 mb-4">{error}</p>}
 
       <input
         type="text"
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600 placeholder-white"
         required
       />
 
-      <select value={route} onChange={(e) => setRoute(e.target.value)} required>
+      <select
+        value={route}
+        onChange={(e) => setRoute(e.target.value)}
+        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
+        required
+      >
         <option value="">Select Route</option>
         {routes.map((r) => (
           <option key={r.id} value={r.id}>
@@ -103,6 +113,7 @@ function BookingForm() {
       <select
         value={vehicle}
         onChange={(e) => setVehicle(e.target.value)}
+        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
         required
       >
         <option value="">Select Vehicle</option>
@@ -117,22 +128,28 @@ function BookingForm() {
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
+        className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
         required
       />
 
       {departureTime && (
-        <p>
+        <p className="text-yellow-300 mb-4">
           Departure Time: <strong>{departureTime}</strong>
         </p>
       )}
 
       {price && (
-        <p>
+        <p className="text-yellow-300 mb-4">
           Price: <strong>{price}</strong>
         </p>
       )}
 
-      <button type="submit">Book Now</button>
+      <button
+        type="submit"
+        className="w-full bg-yellow-400 text-black py-2 px-4 rounded hover:bg-yellow-300 transition cursor-pointer"
+      >
+        Book Now
+      </button>
     </form>
   );
 }
