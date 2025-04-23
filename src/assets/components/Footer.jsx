@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer>
       <p>
-        &copy; {new Date().getFullYear()} zuru Shuttles. All rights reserved.
+        &copy; {new Date().getFullYear()} Zuru Shuttles. All rights reserved.
       </p>
       <form on submit={handleSubmit} style={{ marginTop: "15px" }}>
         <input
