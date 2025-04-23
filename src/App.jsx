@@ -1,6 +1,6 @@
 import React from "react";
-//import Header from "./assets/components/Header";
-//import AdSection from "./components/AdSection";
+import Header from "./assets/components/Header";
+import AdSection from "./assets/components/AdSection";
 import RouteDisplay from "./assets/components/RouteDisplay";
 import BookingForm from "./assets/components/BookingForm";
 import BookingList from "./assets/components/BookingList";
@@ -10,9 +10,9 @@ import BookingList from "./assets/components/BookingList";
 function App() {
   return (
     <div>
-      {/*<Header />
+      <Header />
 
-      <AdSection />*/}
+      <AdSection />
       <div>
         <RouteDisplay />
       </div>
