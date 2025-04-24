@@ -48,7 +48,7 @@ function BookingForm() {
       route: `${selectedRoute.from}-${selectedRoute.to}`,
       vehicle,
       departureDate: date,
-      departureTime: selectedRoute.departure_time,
+      departureTime: selectedRoute.departureTime,
       price: selectedRoute.price,
     };
 
@@ -104,7 +104,7 @@ function BookingForm() {
         <option value="">Select Route</option>
         {routes.map((r) => (
           <option key={r.id} value={r.id}>
-            {r.from} - {r.to} - {r.price}
+            {r.from} - {r.to} - {r.price} -{r.departureTime}
           </option>
         ))}
       </select>
