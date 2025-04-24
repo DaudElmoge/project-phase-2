@@ -87,6 +87,30 @@
       "departureDate": "2025-04-30",
       "departureTime": "14:00",
       "price": "KES 1500"
+    },
+    {
+      "id": "3668",
+      "name": "Tabitha",
+      "route": "Kisumu-Nairobi",
+      "vehicle": "UD",
+      "departureDate": "2025-04-25",
+      "price": "KES 1500"
+    },
+    {
+      "id": "baa3",
+      "name": "Sharon",
+      "route": "Mombasa-Kisumu",
+      "vehicle": "Marcopolo",
+      "departureDate": "2025-04-26",
+      "price": "KES 3000"
+    },
+    {
+      "id": "4c18",
+      "name": "Stephen",
+      "route": "Kisumu-Mombasa",
+      "vehicle": "Scania",
+      "departureDate": "2025-04-27",
+      "price": "KES 3000"
     }
   ]
 }

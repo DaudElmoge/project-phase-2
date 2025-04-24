@@ -1,4 +1,5 @@
-import React from "react";
+//import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -18,30 +19,46 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="flex space-x-4 text-sm sm:text-base font-medium">
-          <a
-            href="#"
-            className="hover:text-yellow-400 transition-colors duration-200"
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                : "hover:text-yellow-400 transition-duration-200 pb-1"
+            }
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="hover:text-yellow-400 transition-colors duration-200"
+          </NavLink>
+          <NavLink
+            to="/booking"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                : "hover:text-yellow-400 transition-duration-200 pb-1"
+            }
           >
             Booking
-          </a>
-          <a
-            href="#"
-            className="hover:text-yellow-400 transition-colors duration-200"
+          </NavLink>
+          <NavLink
+            to="/summary"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                : "hover:text-yellow-400 transition-duration-200 pb-1"
+            }
           >
             Summary
-          </a>
-          <a
-            href="#"
-            className="hover:text-yellow-400 transition-colors duration-200"
+          </NavLink>
+          <NavLink
+            to="/location"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                : "hover:text-yellow-400 transition-duration-200 pb-1"
+            }
           >
             Locate Us
-          </a>
+          </NavLink>
         </nav>
       </div>
     </header>
