@@ -36,6 +36,8 @@ A modern, React-based shuttle booking platform built as a student project. This 
 ### 🧾 Booking Summary
 
 - Confirmation page with print functionality
+- **New:** Each individual booking can now be deleted directly from the summary using a delete button
+- **New:** Deleting a booking triggers a SweetAlert2 confirmation prompt with success/cancel feedback
 
 ### 📮 Footer
 
@@ -52,6 +54,7 @@ A modern, React-based shuttle booking platform built as a student project. This 
 - I want to easily navigate through the app.
 - I want to locate the company office on a map.
 - I want to submit feedback to help improve the service.
+- **I want to delete a booking with confirmation so I can correct mistakes or cancel a trip.**
 
 ---
 
@@ -62,6 +65,7 @@ A modern, React-based shuttle booking platform built as a student project. This 
 - **Routing:** React Router DOM
 - **Mock Backend:** JSON Server
 - **Mapping:** Google Maps Embed API
+- **Alerts:** SweetAlert2
 
 ---
 
@@ -76,10 +80,11 @@ cd shuttle-booking-app
 npm install
 
 # Start mock JSON server
-npx json-server --watch db.json --port 5000
+npx json-server --watch db.json --port 3000
 
 # Run the development server
 npm run dev
+
 
 👨‍🎓 Authors
 This project was developed collaboratively by:
