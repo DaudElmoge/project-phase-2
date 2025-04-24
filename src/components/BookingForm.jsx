@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 
 function BookingForm() {
   const [name, setName] = useState("");
+  const [number,setNumber] = useState("");
   const [route, setRoute] = useState("");
   const [date, setDate] = useState("");
   const [departureTime, setDepartureTime] = useState("");
@@ -39,13 +40,14 @@ function BookingForm() {
     e.preventDefault();
 
     if (!name || !route || !date || !vehicle) {
-      setError("Please fill in all fields.");
+     toast.error("Please fill in all fields.");
       return;
     }
 
     const selectedRoute = routes.find((r) => r.id.toString() === route);
     const newBooking = {
       name,
+      number,
       route: `${selectedRoute.from}-${selectedRoute.to}`,
       vehicle,
       departureDate: date,
@@ -64,6 +66,7 @@ function BookingForm() {
       .then(() => {
         toast.success("Booking successful");
         setName("");
+        setNumber("");
         setRoute("");
         setVehicle("");
         setDate("");
@@ -95,6 +98,14 @@ function BookingForm() {
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+      />
+
+      <input
+        type="number"
+        placeholder="Phone Number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
         className="w-full p-2 mb-4 rounded-lg bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
       />
 

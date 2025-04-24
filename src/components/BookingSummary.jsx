@@ -41,6 +41,7 @@ function BookingSummary() {
           <thead>
             <tr className="text-yellow-300">
               <th className="px-4 py-2 text-left">Name</th>
+              <th className="px-4 py-2 text-left">Phone Number</th>
               <th className="px-4 py-2 text-left">Route</th>
               <th className="px-4 py-2 text-left">Date</th>
               <th className="px-4 py-2 text-left">Departure Time</th>
@@ -55,6 +56,7 @@ function BookingSummary() {
                 className="hover:bg-gray-600 transition duration-200"
               >
                 <td className="px-4 py-2">{booking.name}</td>
+                <td className="px-4 py-2">{booking.number}</td>
                 <td className="px-4 py-2">{booking.route}</td>
                 <td className="px-4 py-2">{booking.departureDate}</td>
                 <td className="px-4 py-2">{booking.departureTime}</td>
