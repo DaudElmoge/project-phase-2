@@ -30,9 +30,9 @@ function BookingSummary() {
   return (
     <div>
       <div
-        ref={printRef}// this will create a reference to the printRef div
+        ref={printRef} // this will create a reference to the printRef div
         // this will be used to get the contents of the printRef div
-        className="bg-gradient-to-r from-black to-gray-900 text-white mt-4 p-4 rounded-xl shadow-lg overflow-x-auto"
+        className=" min-h-screen flex flex-col bg-gradient-to-r from-black to-gray-900 text-white p-6 rounded-xl shadow-lg border"
       >
         <h2 className="text-xl font-semibold text-yellow-400 mb-4">
           Booking Summary
@@ -66,7 +66,7 @@ function BookingSummary() {
         </table>
         <div className="flex justify-center mt-4">
           <button
-            onClick={handlePrint}// this will create a reference to the printRef div
+            onClick={handlePrint} // this will create a reference to the printRef div
             // this will be used to get the contents of the printRef div
             // this will open the print dialog
             className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-300 transition cursor-pointer"

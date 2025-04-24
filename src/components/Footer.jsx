@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 function Footer() {
   const [feedback, setFeedback] = useState("");
@@ -9,7 +10,7 @@ function Footer() {
        alert("Please enter your feedback before submitting.");
        return;
      }
-     alert("Thank you for your feedback!");
+     toast.success("Thank you for your feedback!");
      setFeedback("");
    };
 

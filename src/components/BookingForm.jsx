@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 function BookingForm() {
   const [name, setName] = useState("");
@@ -61,7 +62,7 @@ function BookingForm() {
     })
       .then((res) => res.json())
       .then(() => {
-        alert("Booking successful");
+        toast.success("Booking successful");
         setName("");
         setRoute("");
         setVehicle("");
@@ -73,6 +74,7 @@ function BookingForm() {
       .catch((error) => {
         console.error("Failed to submit booking", error);
         setError("Failed to submit booking");
+        toast.error("Failed to submit booking");
       });
   };
 
@@ -80,7 +82,7 @@ function BookingForm() {
     <form
       onSubmit={handleSubmit}
       id="book"
-      className="max-w-full bg-gradient-to-r from-black to-gray-900 text-white p-6 rounded-xl shadow-lg border "
+      className="min-h-screen flex flex-col bg-gradient-to-r from-black to-gray-900 text-white p-6 rounded-xl shadow-lg border "
     >
       <h2 className="text-2xl font-bold text-yellow-400 text-center mb-4">
         Book a Seat

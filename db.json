@@ -78,6 +78,33 @@
       "departureDate": "2025-04-25",
       "departureTime": "10:00",
       "price": "KES 1500"
+    },
+    {
+      "id": "09d3",
+      "name": "Ian",
+      "route": "Mombasa-Nairobi",
+      "vehicle": "Man",
+      "departureDate": "2025-04-29",
+      "departureTime": "14:00",
+      "price": "KES 1500"
+    },
+    {
+      "id": "0297",
+      "name": "Daud",
+      "route": "Mombasa-Kisumu",
+      "vehicle": "Marcopolo",
+      "departureDate": "2025-04-30",
+      "departureTime": "18:00",
+      "price": "KES 3000"
+    },
+    {
+      "id": "d147",
+      "name": "Stephen",
+      "route": "Kisumu-Mombasa",
+      "vehicle": "UD",
+      "departureDate": "2025-05-01",
+      "departureTime": "20:00",
+      "price": "KES 3000"
     }
   ]
 }
