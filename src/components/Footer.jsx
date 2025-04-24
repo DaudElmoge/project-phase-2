@@ -7,7 +7,7 @@ function Footer() {
    const handleSubmit = (e) => {
      e.preventDefault();
      if (feedback.trim() === "") {
-       alert("Please enter your feedback before submitting.");
+       toast.error("Please enter your feedback before submitting.");
        return;
      }
      toast.success("Thank you for your feedback!");
