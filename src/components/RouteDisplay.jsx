@@ -4,7 +4,7 @@ function RouteDisplay() {
   const [routes, setRoutes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/routes")
+    fetch("https://zuru-shuttles-api.onrender.com/routes")
       .then((res) => res.json())
       .then((data) => setRoutes(data))
       .catch((error) => console.error("Failed to fetch routes", error));
