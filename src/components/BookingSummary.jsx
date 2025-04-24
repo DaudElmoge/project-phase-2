@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from "react";
+import Swal from "sweetalert2";
+
 
 function BookingSummary() {
   const [bookings, setBookings] = useState([]);
@@ -11,6 +13,54 @@ function BookingSummary() {
       .then((data) => setBookings(data))
       .catch((error) => console.error("Failed to fetch bookings", error));
   }, []);
+const handleDelete = (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Yes, delete it!",
+    cancelButtonText: "Cancel",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch(`http://localhost:3000/bookings/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => {
+          if (res.ok) {
+            setBookings((prev) => prev.filter((booking) => booking.id !== id));
+            Swal.fire({
+              icon: "success",
+              title: "Deleted!",
+              text: "The booking has been successfully deleted.",
+              confirmButtonColor: "#3085d6",
+              timer: 10000,
+              showConfirmButton: false,
+            });
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Failed to delete the booking!",
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Error deleting booking:", error);
+          Swal.fire({
+            icon: "error",
+            title: "Error!",
+            text: "Something went wrong while deleting.",
+          });
+        });
+    } else {
+      // Optional: user clicked cancel
+      console.log("Deletion cancelled");
+    }
+  });
+};
 
   const handlePrint = () => {
     const printContents = printRef.current.innerHTML;// this will get the contents of the printRef
@@ -54,6 +104,7 @@ function BookingSummary() {
                   Vehicle
                 </th>
                 <th className="px-4 py-2 text-left whitespace-nowrap">Price</th>
+                <th className="px-4 py-2 text-left whitespace-nowrap"></th>
               </tr>
             </thead>
             <tbody>
@@ -69,6 +120,14 @@ function BookingSummary() {
                   <td className="px-4 py-2">{booking.departureTime}</td>
                   <td className="px-4 py-2">{booking.vehicle}</td>
                   <td className="px-4 py-2">{booking.price}</td>
+                  <td className="px-4 py-2">
+                    <button
+                      onClick={() => handleDelete(booking.id)}
+                      className="bg-red-600 hover:bg-red-500 cursor-pointer text-white px-2 py-1 rounded-md text-xs"
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -78,7 +137,7 @@ function BookingSummary() {
         <div className="flex justify-center mt-6">
           <button
             onClick={handlePrint}
-            className="bg-yellow-400 text-black px-6 py-2 rounded-md hover:bg-yellow-300 transition duration-200"
+            className="bg-yellow-400 text-black px-6 py-2 rounded-md hover:bg-yellow-300 cursor-pointer transition duration-200"
           >
             Print / Download PDF
           </button>

@@ -111,12 +111,22 @@
       "price": "KES 3000"
     },
     {
-      "id": "fa81",
+      "id": "42e3",
       "name": "Daud",
-      "number": "07421512761",
+      "number": "0799542016",
       "route": "Nairobi-Mombasa",
       "vehicle": "Scania",
-      "departureDate": "2025-05-01",
+      "departureDate": "2025-04-25",
+      "departureTime": "10:00",
+      "price": "KES 1500"
+    },
+    {
+      "id": "c0a4",
+      "name": "Mabrux",
+      "number": "0752361378",
+      "route": "Nairobi-Mombasa",
+      "vehicle": "Scania",
+      "departureDate": "2025-04-25",
       "departureTime": "10:00",
       "price": "KES 1500"
     }
