@@ -79,6 +79,46 @@
       "departureDate": "2025-04-25",
       "departureTime": "10:00",
       "price": "KES 1500"
+    },
+    {
+      "id": "95a7",
+      "name": "Stephen",
+      "number": "07888388888",
+      "route": "Mombasa-Kisumu",
+      "vehicle": "Marcopolo",
+      "departureDate": "2025-04-25",
+      "departureTime": "18:00",
+      "price": "KES 3000"
+    },
+    {
+      "id": "e98a",
+      "name": "Tabitha",
+      "number": "0751365363",
+      "route": "Mombasa-Nairobi",
+      "vehicle": "Scania",
+      "departureDate": "2025-04-26",
+      "departureTime": "14:00",
+      "price": "KES 1500"
+    },
+    {
+      "id": "3091",
+      "name": "Sharon",
+      "number": "07345245242542",
+      "route": "Kisumu-Mombasa",
+      "vehicle": "UD",
+      "departureDate": "2025-04-30",
+      "departureTime": "20:00",
+      "price": "KES 3000"
+    },
+    {
+      "id": "fa81",
+      "name": "Daud",
+      "number": "07421512761",
+      "route": "Nairobi-Mombasa",
+      "vehicle": "Scania",
+      "departureDate": "2025-05-01",
+      "departureTime": "10:00",
+      "price": "KES 1500"
     }
   ]
 }

@@ -1,12 +1,99 @@
-# React + Vite
+# 🚐 Shuttle Booking App (MVP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, React-based shuttle booking platform built as a student project. This application enables users to view travel routes, submit shuttle bookings, print booking summaries, and locate the shuttle office via an embedded map. It uses a mock JSON server for backend simulation, showcasing essential front-end development skills.
 
-Currently, two official plugins are available:
+## 🔗 **Repo:** [github.com/DaudElmoge/project-phase-2](https://github.com/DaudElmoge/project-phase-2)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 🔀 Client-Side Routes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `/` → Home Page
+- `/booking` → Booking Page
+- `/locate-us` → Locate Us Page
+- `/summary` → Booking Summary and Print Page
+
+### 🧭 Navigation
+
+- Header with links for seamless movement between pages
+
+### 🎬 Ad Section
+
+- Hero banner introducing the shuttle service
+
+### 📝 Booking Form
+
+- Users input name, select route and van, then submit
+
+### 🧳 Route Display
+
+- Lists available travel routes from a mock API
+
+### 📍 Location Map
+
+- Google Map embed displaying the shuttle office location
+
+### 🧾 Booking Summary
+
+- Confirmation page with print functionality
+
+### 📮 Footer
+
+- Contact info and feedback/suggestions form
+
+---
+
+## 👥 User Stories
+
+- I want to see available routes so I can choose my destination.
+- I want to book a shuttle to secure my seat in advance.
+- I want to receive a confirmation after booking.
+- I want to print my booking summary for reference.
+- I want to easily navigate through the app.
+- I want to locate the company office on a map.
+- I want to submit feedback to help improve the service.
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **Mock Backend:** JSON Server
+- **Mapping:** Google Maps Embed API
+
+---
+
+## 🚀 Setup Instructions
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/shuttle-booking-app.git
+cd shuttle-booking-app
+
+# Install dependencies
+npm install
+
+# Start mock JSON server
+npx json-server --watch db.json --port 5000
+
+# Run the development server
+npm run dev
+
+👨‍🎓 Authors
+This project was developed collaboratively by:
+
+Daud Elmoge
+
+Ian Sang
+
+Sharon Muchemi
+
+Stephen Magiya
+
+Tabitha Wangechi
+
+Built as part of a learning project to demonstrate React fundamentals, UI/UX design, and basic full-stack simulation using JSON Server.
+
+```
