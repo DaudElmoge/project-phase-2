@@ -24,7 +24,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark" // optional theme
+        theme="dark" 
       />
     </div>
   );
