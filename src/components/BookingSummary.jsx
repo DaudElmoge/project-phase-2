@@ -8,7 +8,7 @@ function BookingSummary() {
   // this will be used to get the contents of the printRef div
 
   useEffect(() => {
-    fetch("http://localhost:3000/bookings")
+    fetch("https://zuru-shuttles-api.onrender.com/bookings")
       .then((res) => res.json())
       .then((data) => setBookings(data))
       .catch((error) => console.error("Failed to fetch bookings", error));
@@ -25,7 +25,7 @@ const handleDelete = (id) => {
     cancelButtonText: "Cancel",
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`http://localhost:3000/bookings/${id}`, {
+      fetch(`https://zuru-shuttles-api.onrender.com/bookings/${id}`, {
         method: "DELETE",
       })
         .then((res) => {
