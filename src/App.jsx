@@ -1,32 +1,18 @@
 import React from "react";
-import Header from "./assets/components/Header";
-import AdSection from "./assets/components/AdSection";
-import RouteDisplay from "./assets/components/RouteDisplay";
-import BookingForm from "./assets/components/BookingForm";
-import LocationMap from "./assets/components/LocationMap";
-import Footer from "./assets/components/Footer";
-import BookingSummary from "./assets/components/BookingSummary";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-
-      <AdSection />
-      <div>
-        <RouteDisplay />
-      </div>
-      <div>
-        <BookingForm />
-      </div>
-      <div>
-        <BookingSummary />
-      </div>
-      <div>
-        <LocationMap />
-      </div>
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <Footer />
     </div>
+    
   );
 }
 

@@ -34,6 +34,12 @@ const Header = () => {
             href="#"
             className="hover:text-yellow-400 transition-colors duration-200"
           >
+            Summary
+          </a>
+          <a
+            href="#"
+            className="hover:text-yellow-400 transition-colors duration-200"
+          >
             Locate Us
           </a>
         </nav>
