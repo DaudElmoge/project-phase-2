@@ -76,6 +76,7 @@
       "route": "Nairobi-Mombasa",
       "vehicle": "Scania",
       "departureDate": "2025-04-22",
+      "departureTime": "10:00",
       "price": "KES 1500"
     },
     {
@@ -84,6 +85,7 @@
       "route": "Mombasa-Nairobi",
       "vehicle": "Man",
       "departureDate": "2025-04-30",
+      "departureTime": "14:00",
       "price": "KES 1500"
     }
   ]

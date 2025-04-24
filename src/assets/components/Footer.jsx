@@ -37,7 +37,7 @@ function Footer() {
           />
           <button
             type="submit"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-2 rounded-lg transition cursor-pointer"
+            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-2 rounded-lg transition cursor-pointer"
           >
             Submit
           </button>
